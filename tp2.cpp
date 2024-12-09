@@ -20,6 +20,18 @@ int Date::day(){
     return day_;
 }
 
+void Date::setDay(int day){
+    day_=day;
+}
+
+void Date::setMonth(int month){
+    month_=month;
+}
+
+void Date::setYear(int year){
+    year_=year;
+}
+
 int Date::month(){
     return month_;
 }
@@ -101,6 +113,23 @@ int Reservation::id_Hotel(){
     return id_Hotel_;
 }
 
+int Reservation::nb_nuits(){
+    return nb_nuits_;
+}
+
+double Reservation::montant_tot(){
+    return montant_tot_;
+}
+
+Date Reservation::DateDebut(){
+    return DateDebut_;
+}
+
+void Reservation::ChangementDate(int day, int month, int year){
+    DateDebut_.setDay(day);
+    DateDebut_.setMonth(month);
+    DateDebut_.setYear(year);
+}
 
 
 

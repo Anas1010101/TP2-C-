@@ -9,6 +9,10 @@ class Date {
         int year();
         int month();
         int day();
+        void setDay(int day);
+        void setMonth(int month);
+        void setYear(int year);
+        
     private:
         bool isDate(int year, int month, int day) const;
         int year_;
@@ -75,12 +79,17 @@ class Hotel {
 
 class Reservation{
     public:
-        Reservation(int nb_nuits, int id_Hotel, int id_Chambre, int id_Client, double montant_tot);
-        int nb_nuits_();
+        Reservation(Date DateDebut, int nb_nuits, int id_Hotel, int id_Chambre, int id_Client, double montant_tot);
+        Date DateDebut();
+        int nb_nuits();
         int id_Hotel();
         int id_Chambre();
         int id_Client();
         double montant_tot();
+
+        void ChangementDate(int day, int month, int year);
+
+
 
     private:
         Date DateDebut_;
